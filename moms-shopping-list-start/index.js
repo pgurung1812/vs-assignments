@@ -15,4 +15,11 @@ listitem.appendChild(editbtn)
 listitem.appendChild(xbtn)
 itemlist.append(listitem)
 form.title.value=""
+
+xbtn.addEventListener("click",(e)=>{
+    let childnode=e.target.parentNode
+    childnode.parentNode.removeChild(childnode)
+
+})
+
 })
