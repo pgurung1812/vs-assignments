@@ -1,3 +1,4 @@
+//Bronze
 const header= document.getElementById("header");
 header.textContent="Javascript Made this";
 header.style.fontWeight="bold";
@@ -9,13 +10,14 @@ header.append(namecontainer);
 
 const nameuser= document.createElement("span");
 nameuser.textContent="Prasanna Gurung "
+nameuser.style.color="blue"
 namecontainer.appendChild(nameuser);
 const belowheader=document.createElement("h3");
 belowheader.textContent="Wrote the Javascript";
 belowheader.style.display="inline";
 namecontainer.appendChild(belowheader);
 
-
+//Silver
 const message=document.querySelectorAll(".left");
 
 let word="Hello";
@@ -41,3 +43,38 @@ for(let i=0;i<messages.length;i++){
     messages[i].textContent="";
 }
 });
+
+//Gold
+
+const left=document.getElementsByClassName("left")
+const right=document.getElementsByClassName("right")
+const select= document.getElementById("theme-drop-down")
+console.log(left)
+console.log(right)
+select.addEventListener("change",(e)=>{
+   console.log (e.target.value)
+   if(e.target.value==="theme-one"){
+    for(let i=0;i<left.length;i++){
+        left[i].style.backgroundColor="blue"
+    }
+
+    for(let i=0;i<right.length;i++){
+        right[i].style.backgroundColor="brown"
+    }
+
+   }else{
+for(let i=0;i<left.length;i++){
+    left[i].style.backgroundColor="red"
+   }
+
+   for(let i=0;i<right.length;i++){
+    right[i].style.backgroundColor="black"
+}
+
+   
+}
+
+
+
+
+})
