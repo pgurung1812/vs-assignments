@@ -28,13 +28,15 @@ form.addEventListener("submit", (event) => {
    const savebtn=document.createElement("button")
    savebtn.textContent="save"
    e.target.parentNode.append(savebtn)
-
+   editbtn.style.display="none"
+   xbtn.style.display="none"
    savebtn.addEventListener("click",function(e){
     e.target.parentNode.firstChild.textContent=input.value
     console.log(input)
     e.target.parentNode.removeChild(input)
     e.target.parentNode.removeChild(savebtn)
-
+    editbtn.style.display="block"
+    xbtn.style.display="block"
   
   })
   
