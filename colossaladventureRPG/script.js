@@ -98,6 +98,7 @@ while (!gameend) {
   }
 }
 
+//Checks if the enemy is already killed or not
 function checkenemykilledlist(enemylistkilled, enemychoice, enemylist) {
   while (true) {
     if (enemylistkilled.includes(enemylist[enemychoice]) || enemychoice > 2) {
@@ -159,7 +160,7 @@ function endOfRound(
           console.log("Congratulations you killed all of your enemies");
           return gameend;
         }
-        // break;
+        break;
       }
     }
   }
